@@ -31,7 +31,7 @@
 Simple single figure:
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.2]{sin.png}
+\includegraphics[scale=0.2]{figures/sin.png}
 \caption{A nice figure.}
 \label{fig:lab}
 \end{figure}
@@ -40,9 +40,9 @@ Several figures as a table with a single caption:
 \begin{figure*}[!h]
   \centering
   \begin{tabular}{cc}
-    \includegraphics[scale=0.2]{sin.png}
+    \includegraphics[scale=0.2]{figures/sin.png}
     &
-    \includegraphics[scale=0.2]{sin.png}
+    \includegraphics[scale=0.2]{figures/sin.png}
   \end{tabular}
   \caption{Another nice figure.}\label{fig:lab}
 \end{figure*}
@@ -52,21 +52,21 @@ To use subfigures and subcaption, need to \verb|\usepackage{subcaption}|:
      \centering
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{sin.png}
+         \includegraphics[width=\textwidth]{figures/sin.png}
          \caption{Caption 1.}
          \label{fig:lab}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{sin.png}
+         \includegraphics[width=\textwidth]{figures/sin.png}
          \caption{Caption 2.}
          \label{fig:lab}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[width=\textwidth]{sin.png}
+         \includegraphics[width=\textwidth]{figures/sin.png}
          \caption{Caption 3.}
          \label{fig:lab}
      \end{subfigure}
