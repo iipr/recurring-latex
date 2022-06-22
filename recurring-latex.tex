@@ -4,14 +4,35 @@
 %\usepackage{caption}
 \usepackage{subcaption}
 
+% Hyperreferences and references
+\usepackage{hyperref}
+\usepackage{url}
+
+% Graphics
+\usepackage{graphicx}
+% Where to look for figures
+\graphicspath{{.}{./figures/}}
+
 % For tikz
 \usepackage{pgf}
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata,matrix,positioning,shapes,shapes.geometric}
 %\usepackage{xcolor}
 
+% Multirow and column
 \usepackage{multirow}
 \usepackage{makecell}
+
+% Algorithm
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Equation
+\usepackage{amsmath}
+
+% ORCID
+\newcommand{\orcid}[1]{\textsuperscript{\href{https://orcid.org/#1}{\includegraphics[scale=0.04]{00_orcid.pdf}}}}
+
 
 \begin{document}
 
@@ -157,5 +178,52 @@ That.             & This.               &    That other thing that is long. & Th
 %}
 \end{center}
 \end{table*}
+
+Useful for \LaTeX~tables: \href{https://www.tablesgenerator.com/latex_tables}{link}.
+
+\section{Including an algorithm}
+
+\begin{verbatim}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\end{verbatim}
+
+\begin{algorithm}
+\caption{Sample algorithm.}\label{alg:sampleAlg}
+\begin{algorithmic}[1]
+\ForAll{$x \in X$}
+	\ForAll{$y \in Y$}\label{ln:for2}
+		\If{$x == 0$}
+			\State $x \gets y$
+		\Else
+			\State $y \gets x$
+		\EndIf
+		\State store$\left(x, y \right)$
+	\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Sample line reference in algorithm \ref{alg:sampleAlg}: see line \ref{ln:for2}.
+
+\section{Including an equation}
+
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+
+\begin{equation}\label{eq:skill}
+	S = \left(1 - \frac{\text{error}_{\text{proposed}}}{\text{error}_{\text{reference}}}\right) \cdot 100
+\end{equation}
+
+\section{Including the ORCID as a link}
+
+Make sure hyperref is available.
+\begin{verbatim}
+\newcommand{\orcid}[1]{\textsuperscript{\href{https://orcid.org/#1}
+	\includegraphics[scale=0.04]{00_orcid.pdf}}}}
+\end{verbatim}
+
+See Prado-Rujas{\orcid{0000-0003-4018-8725}}.
 
 \end{document}
