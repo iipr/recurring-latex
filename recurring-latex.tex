@@ -95,7 +95,29 @@ To use subfigures and subcaption, need to \verb|\usepackage{subcaption}|:
         \label{fig:lab}
 \end{figure*}
 
-
+\newpage
+Same as the previous one, but moving it into the margin:
+\hrule
+\begin{figure}[htp]
+     \makebox[\linewidth][c]{
+     \begin{subfigure}[t]{.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figures/sin.png}
+         \caption{Caption 1.}
+         \label{fig:robTaxi}
+     \end{subfigure}
+     %\hfill
+     \begin{subfigure}[t]{.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figures/sin.png}
+         \caption{Caption 2.}
+         \label{fig:robBike}
+     \end{subfigure}
+     }
+     \caption{Two simple graphs moved into the margins.}
+     \label{fig:lab}
+\end{figure}
+\hrule
 
 \section{Simple TikZ diagram}
 
