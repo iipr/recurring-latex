@@ -258,4 +258,20 @@ See Prado-Rujas{\orcid{0000-0003-4018-8725}}.
 	\end{landscape}
 \end{verbatim}
 
+\section{latexdiff breaks with textcolor + citation}
+
+Consider this in the preamble (textcolor):
+\begin{verbatim}
+	\newcommand{\note}[1]{\textcolor{magenta}{#1}}
+\end{verbatim}
+When adding this to the new file:
+\begin{verbatim}
+	\note{To-do: Include} \citep{repo}.
+\end{verbatim}
+the latexdiff compiles. However, this does not:
+\begin{verbatim}
+	\note{To-do: Include \citep{repo}.}
+\end{verbatim}
+Haven't understood why yet.
+
 \end{document}
